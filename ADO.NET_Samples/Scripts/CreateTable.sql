@@ -1,0 +1,20 @@
+GO
+
+/****** Object:  Table [dbo].[tblNews]    Script Date: 10/09/2017 09:10:40 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[tblNews](
+	[NewsID] [int] IDENTITY(1,1) NOT NULL,
+	[Title] [nvarchar](1024) NOT NULL,
+	[Description] [nvarchar](max) NULL,
+ CONSTRAINT [PK_tblBlog] PRIMARY KEY CLUSTERED 
+(
+	[NewsID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, FILLFACTOR = 90) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+
+GO

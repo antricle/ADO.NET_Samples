@@ -1,0 +1,12 @@
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[uspGetNewsByID]
+      @NewsID int = 0
+AS
+BEGIN
+      SET NOCOUNT ON;
+      SELECT *
+      FROM tblNews WHERE NewsID=@NewsID
+END
